@@ -1,0 +1,5 @@
+.env
+
+.vscode/
+src/_fresh/
+node_modules/

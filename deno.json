@@ -1,0 +1,42 @@
+{
+  "lock": false,
+  "nodeModulesDir": "auto",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "preact",
+    "types": ["./src/types/shims/fresh.d.ts"]
+  },
+  "fmt": {
+    "lineWidth": 160,
+    "semiColons": false,
+    "singleQuote": true
+  },
+  "lint": {
+    "rules": {
+      "tags": ["fresh", "recommended"],
+      "include": ["verbatim-module-syntax"]
+    }
+  },
+  "exclude": ["./node_modules/*", "./src/_fresh/*"],
+  "tasks": {
+    "check": "deno fmt --check && deno lint && deno check **/*.ts && deno check **/*.tsx",
+    "cli": "echo \"import '\\$fresh/src/dev/cli.ts'\" | deno run --unstable -A -",
+    "manifest": "deno task cli manifest $(pwd)/src",
+    "start": "deno run -A --watch=src/static/,src/routes/ src/dev.ts",
+    "build": "deno run -A src/dev.ts build",
+    "preview": "deno run -A src/main.ts"
+  },
+  "imports": {
+    "~/": "./src/",
+    "@preact/signals-core": "https://esm.sh/*@preact/signals-core@1.5.1",
+    "@preact/signals": "https://esm.sh/*@preact/signals@1.2.2",
+    "$fresh/": "https://deno.land/x/fresh@1.7.3/",
+    "$std/": "https://deno.land/std@0.216.0/",
+    "i18next": "https://deno.land/x/i18next@v24.2.2/index.js",
+    "preact": "https://esm.sh/preact@10.22.0",
+    "preact/": "https://esm.sh/preact@10.22.0/",
+    "tailwindcss": "npm:tailwindcss@3.4.1",
+    "tailwindcss/": "npm:/tailwindcss@3.4.1/",
+    "tailwindcss/plugin": "npm:/tailwindcss@3.4.1/plugin.js"
+  }
+}
