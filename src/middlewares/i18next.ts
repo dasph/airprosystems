@@ -1,8 +1,8 @@
 import i18next from 'i18next'
 
-import ua from '~/locales/ua.json' with { type: 'json' }
+import uk from '~/locales/uk.json' with { type: 'json' }
 
 export default await i18next.init({
-  fallbackLng: 'ua',
-  resources: { ua: { translation: ua } },
+  fallbackLng: 'uk',
+  resources: { uk: { translation: uk } },
 })

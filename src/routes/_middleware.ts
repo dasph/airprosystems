@@ -1,9 +1,9 @@
-import type { FreshContext } from '$fresh/server.ts'
+import { define } from '~/utils.ts'
 
 import t from '~/middlewares/i18next.ts'
 
-export const handler = (_req: Request, ctx: FreshContext): Promise<Response> => {
+export default define.middleware((ctx) => {
   Object.assign(ctx.state, { t })
 
   return ctx.next()
-}
+})
