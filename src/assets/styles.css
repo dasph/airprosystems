@@ -1,1 +1,32 @@
 @import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: Roboto, ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+
+  --animate-slide: slide 3s infinite;
+  --animate-spin: slide 6s linear infinite;
+
+  @keyframes spin {
+    to {
+      transform: rotate(1turn);
+    }
+  }
+
+  @keyframes slide {
+    0% {
+      transform: translate(-20rem);
+    }
+    25% {
+      transform: translate(-10rem);
+    }
+    to {
+      transform: translate(15rem);
+    }
+  }
+}
+
+@utility contained {
+  @apply container mx-auto px-4 sm:px-6 lg:px-8;
+}

@@ -2,12 +2,19 @@
   "generic": {
     "hi": "привіт",
     "back": "назад",
-    "brand": "AIRPROSYSTEMS"
+    "brand": "AirPro Systems",
+    "offerings": "usługi",
+    "contact": "kontakt"
   },
   "title": {
     "404": "404 - Сторінка не знайдена"
   },
   "error": {
     "404": "Сторінка, яку ви шукали, не існує"
+  },
+  "component": {
+    "footer": {
+      "copyright": "© 2025 AirPro Systems"
+    }
   }
 }
