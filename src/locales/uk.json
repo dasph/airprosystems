@@ -13,6 +13,12 @@
     "404": "Сторінка, яку ви шукали, не існує"
   },
   "component": {
+    "hero": {
+      "title": "Perfekcyjny klimat - niezależnie od pogody!",
+      "description": "Oferujemy najwyższej jakości usługi montażu klimatyzacji, aby zapewnić komfort w Twoim domu i miejscu pracy przez cały rok.",
+      "slogan": "Wasz komfort, nasza pasja.",
+      "more": "Więcej informacji"
+    },
     "footer": {
       "copyright": "© 2025 AirPro Systems"
     }
