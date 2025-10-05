@@ -35,6 +35,72 @@
         }
       }
     },
+    "testimonials": {
+      "title": "Nie wierz nam na słowo",
+      "description": "Zaufaj opiniom naszych klientów",
+      "items": {
+        "0": {
+          "name": "Krystian Domański",
+          "service": "Instalacja klimatyzacji",
+          "description": "Pełen profesjonalizm i rzetelność! Instalacja klimatyzacji przebiegła sprawnie i zgodnie z terminem. Polecam każdemu!"
+        },
+        "1": {
+          "name": "Katarzyna Rogowska",
+          "service": "Montaż klimatyzacji",
+          "description": "Firma godna polecenia! Kontakt na najwyższym poziomie, wszystko wyjaśnione krok po kroku, a sam montaż przebiegł błyskawicznie. Klimatyzacja sprawuje się świetnie nawet w upalne dni."
+        },
+        "2": {
+          "name": "Michał Wójcik",
+          "service": "Montaż klimatyzacji",
+          "description": "Bardzo pomocny zespół! Doradzili mi w wyborze odpowiedniego urządzenia do mojego mieszkania."
+        },
+        "3": {
+          "name": "Marcin Dąbrowski",
+          "service": "Instalacja klimatyzacji",
+          "description": "Pan Piotr wykazał się ogromną wiedzą i doświadczeniem. Pomógł mi dobrać klimatyzację idealnie dopasowaną do moich potrzeb. Po pół roku użytkowania mogę potwierdzić, że był to strzał w dziesiątkę! Montaż bez zastrzeżeń, szybko i sprawnie."
+        },
+        "4": {
+          "name": "Damian Górski",
+          "service": "Instalacja i konfiguracja klimatyzacji",
+          "description": "Jestem pod wrażeniem! Ekipa nie tylko zamontowała klimatyzację, ale również pomogła w konfiguracji sterowania aplikacją mobilną. Fachowa i miła obsługa, bardzo dziękuję!"
+        },
+        "5": {
+          "name": "Adrian Kaczmarek",
+          "service": "Naprawa klimatyzacji",
+          "description": "Potrzebowałem szybkiej pomocy, bo moja klimatyzacja przestała działać w środku lata."
+        },
+        "6": {
+          "name": "Małgorzata Chropczyk",
+          "service": "Demontaż i ponowny montaż klimatyzacji",
+          "description": "Rzetelność i solidność - tak mogę określić tę firmę. Przenosili mi klimatyzację do nowego mieszkania, wszystko poszło sprawnie i bez niespodzianek. Bardzo dziękuję!"
+        },
+        "7": {
+          "name": "Tomasz Lisowski",
+          "service": "Serwis i konserwacja klimatyzacji",
+          "description": "Wspaniała współpraca! Zleciłem tej firmie serwis mojej klimatyzacji, wszystko odbyło się terminowo i profesjonalnie."
+        },
+        "8": {
+          "name": "Łukasz Kwiatkowski",
+          "service": "Montaż systemu wentylacji",
+          "description": "Serdecznie polecam! Montaż wentylacji w naszym biurze został wykonany perfekcyjnie. Pracownicy firmy doradzili najlepsze rozwiązanie, a realizacja była szybka i zgodna z umową."
+        },
+        "9": {
+          "name": "Dawid Mazur",
+          "service": "Kompleksowa instalacja klimatyzacji",
+          "description": "Pełen profesjonalizm! Ekipa zajęła się kompleksową instalacją klimatyzacji w moim domu, łącznie z estetycznym ukryciem przewodów. Wszystko wygląda pięknie i działa bez zarzutu. Warto było skorzystać z ich usług!"
+        },
+        "10": {
+          "name": "Piotr Lewandowski",
+          "service": "Instalacja pompy ciepła",
+          "description": "Montaż pompy ciepła przebiegł bardzo sprawnie, a ekipa dokładnie wytłumaczyła mi zasady działania urządzenia. Świetna obsługa i fachowa wiedza. Polecam z całego serca!"
+        },
+        "11": {
+          "name": "Aleksander Nowak",
+          "service": "Czyszczenie i dezynfekcja klimatyzacji",
+          "description": "Firma wykonała u mnie czyszczenie klimatyzacji. Teraz działa o wiele wydajniej i nie ma żadnych nieprzyjemnych zapachów."
+        }
+      }
+    },
     "footer": {
       "copyright": "© 2025 AirPro Systems"
     }
