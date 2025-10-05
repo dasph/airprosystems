@@ -19,6 +19,22 @@
       "slogan": "Wasz komfort, nasza pasja.",
       "more": "Więcej informacji"
     },
+    "advantages": {
+      "items": {
+        "0": {
+          "title": "Kwalifikacje",
+          "description": "Nasze usługi opierają się na wiedzy, umiejętnościach i certyfikatach potwierdzających nasze kompetencje."
+        },
+        "1": {
+          "title": "Terminowe realizacje",
+          "description": "Dotrzymujemy ustalonych terminów, dbając o sprawną i terminową realizację każdego zlecenia."
+        },
+        "2": {
+          "title": "Fachowość",
+          "description": "Nasz zespół to wykwalifikowani specjaliści, którzy łączą wiedzę, doświadczenie i precyzję, by zapewnić najwyższą jakość usług."
+        }
+      }
+    },
     "footer": {
       "copyright": "© 2025 AirPro Systems"
     }
