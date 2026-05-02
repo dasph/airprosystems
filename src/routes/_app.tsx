@@ -4,7 +4,7 @@ import { define } from '~/utils.ts'
 
 export default define.page(({ Component, state: { t } }) => (
   <html>
-    <head lang='uk'>
+    <head lang='pl'>
       <meta charset='utf-8' />
       <meta name='theme-color' content='#030712' />
       <meta name='viewport' content='width=device-width, initial-scale=1' />

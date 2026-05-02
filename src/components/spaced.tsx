@@ -7,7 +7,7 @@ type Props = HTMLAttributes<HTMLDivElement> & {
 }
 
 const Spacer = ({ class: className = '' }: HTMLAttributes<SVGSVGElement>) => (
-  <svg viewBox='0 0 15 15' aria-hidden='true' class={`absolute size-[15px] fill-white/10 ${className}`}>
+  <svg viewBox='0 0 15 15' aria-hidden='true' class={`absolute size-[15px] fill-black/20 dark:fill-white/10 ${className}`}>
     <path d='M8 0H7V7H0V8H7V15H8V8H15V7H8V0Z' />
   </svg>
 )

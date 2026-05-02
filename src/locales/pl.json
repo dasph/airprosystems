@@ -1,16 +1,8 @@
 {
   "generic": {
-    "hi": "привіт",
-    "back": "назад",
     "brand": "AirPro Systems",
     "offerings": "usługi",
     "contact": "kontakt"
-  },
-  "title": {
-    "404": "404 - Сторінка не знайдена"
-  },
-  "error": {
-    "404": "Сторінка, яку ви шукали, не існує"
   },
   "component": {
     "hero": {
@@ -102,7 +94,16 @@
       }
     },
     "footer": {
-      "copyright": "© 2025 AirPro Systems"
+      "banner": {
+        "subTitle": "Potrzebujesz pomocy?",
+        "title": "Niezawodny serwis klimatyzacji",
+        "description": "Montaż i naprawa dowolnej złożoności. Solidnie i na czas.",
+        "action": "Zadzwoń teraz!"
+      },
+      "sections": {
+        "sitemap": "Mapa strony",
+        "social": "Obserwuj nas"
+      }
     }
   }
 }

@@ -2,7 +2,9 @@ import type { HTMLAttributes } from 'preact'
 
 type Props = HTMLAttributes<HTMLDivElement>
 
-const Line = ({ class: className = '' }: HTMLAttributes<HTMLDivElement>) => <div class={`absolute inset-x-0 border-white/5 ${className}`} />
+const Line = ({ class: className = '' }: HTMLAttributes<HTMLDivElement>) => (
+  <div class={`absolute inset-x-0 border-black/10 dark:border-white/5 ${className}`} />
+)
 
 export default ({ children, class: className = '', ...props }: Props) => (
   <div class={`group/row relative isolate pt-[calc(--spacing(2)+1px)] last:pb-[calc(--spacing(2)+1px)] ${className}`} {...props}>
