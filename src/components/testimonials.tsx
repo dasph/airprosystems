@@ -65,7 +65,7 @@ export default ({ t, items, class: className = '', ...props }: Props) => {
   }
 
   return (
-    <section class={`py-16 mt-6 md:mt-12 overflow-x-hidden ${className}`} {...props}>
+    <section class={`pb-16 overflow-x-hidden ${className}`} {...props}>
       <div class='contained'>
         <div>
           <Lined class='flex justify-center'>

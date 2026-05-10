@@ -1,5 +1,5 @@
 import { computed } from '@preact/signals'
-import { createRef, type HTMLAttributes } from 'preact'
+import { createRef, type FunctionComponent, type HTMLAttributes } from 'preact'
 
 import { scroll } from '~/composables/scroll.ts'
 
@@ -12,6 +12,8 @@ import Moon from '~/icons/moon.tsx'
 import Burger from '~/icons/burger.tsx'
 import LogoLarge from '~/icons/logo-large.tsx'
 import LogoSmall from '~/icons/logo-small.tsx'
+
+import { Section } from '~/enums/mod.ts'
 
 type T = Record<'offerings' | 'contact', string>
 
@@ -43,8 +45,8 @@ export default ({ t, class: className = '', ...props }: Props) => {
   const headerBlur = computed<string>(() => scrolled.value ? 'bg-white/70 dark:bg-gray-900/70 backdrop-blur-md' : '')
 
   const links: LinkProps[] = [
-    { href: '/', label: t.contact },
-    { href: '/', label: t.offerings },
+    { href: `#${Section.CONTACT}`, label: t.contact },
+    { href: `#${Section.OFFERINGS}`, label: t.offerings },
   ]
 
   const toggleDropdown = () => {
@@ -52,9 +54,9 @@ export default ({ t, class: className = '', ...props }: Props) => {
     backdrop.current?.classList.toggle('scale-y-100')
   }
 
-  const Links = () => (
+  const Links: FunctionComponent<{ onClick?: () => void }> = ({ onClick }) => (
     <>
-      {links.map(({ href, label }, index) => <Link class='text-sm capitalize' href={href} key={index}>{label}</Link>)}
+      {links.map(({ href, label }, index) => <Link class='text-sm capitalize' href={href} key={index} onClick={onClick}>{label}</Link>)}
 
       <IconButton onClick={toggleDarkMode}>
         <Sun class='w-5 h-5 text-white duration-300 hidden dark:inline-block hover:rotate-180' />
@@ -89,7 +91,7 @@ export default ({ t, class: className = '', ...props }: Props) => {
               </div>
 
               <div class='flex flex-col items-start px-5 pt-4 pb-3 space-y-4'>
-                <Links />
+                <Links onClick={toggleDropdown} />
               </div>
             </div>
           </div>

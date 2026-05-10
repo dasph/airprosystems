@@ -93,6 +93,64 @@
         }
       }
     },
+    "contact": {
+      "title": "Zadzwoń do nas.",
+      "description": "Nasi technicy są do Twojej dyspozycji. Wybierz specjalistę i umów się na wizytę.",
+      "cards": {
+        "0": {
+          "name": "Wiktor",
+          "phone": "796 402 890",
+          "title": "Technik klimatyzacji",
+          "description": "Zadzwoń i umów montaż lub przegląd. Działam sprawnie i bez żadnego zbędnego czekania."
+        },
+        "1": {
+          "name": "Piotr",
+          "phone": "731 784 472",
+          "title": "Technik klimatyzacji",
+          "description": "Potrzebujesz serwisu lub naprawy? Zadzwoń - szybko ocenię problem i znajdę rozwiązanie."
+        }
+      }
+    },
+    "offerings": {
+      "items": {
+        "0": {
+          "title": "Montaż klimatyzacji",
+          "description": "Profesjonalny montaż klimatyzatorów w domach i biurach. Szybko, solidnie i z gwarancją."
+        },
+        "1": {
+          "title": "Serwis i konserwacja",
+          "description": "Regularne przeglądy i czyszczenie - przedłużamy żywotność Twojego klimatyzatora."
+        },
+        "2": {
+          "title": "Bezpłatna wycena",
+          "description": "Przyjeżdżamy, oceniamy i wyceniamy instalację - bez żadnych zobowiązań."
+        },
+        "3": {
+          "title": "Sprzedaż klimatyzatorów",
+          "description": "Oferujemy klimatyzatory wiodących producentów w atrakcyjnych cenach."
+        },
+        "4": {
+          "title": "Systemy wentylacyjne",
+          "description": "Projektowanie i instalacja wentylacji mechanicznej dla każdego obiektu."
+        },
+        "5": {
+          "title": "Rekuperacja",
+          "description": "Energooszczędna wentylacja z odzyskiem ciepła - świeże powietrze i niższe rachunki."
+        },
+        "6": {
+          "title": "Klimatyzacja domowa",
+          "description": "Dobieramy i montujemy klimatyzację idealnie dopasowaną do Twojego mieszkania."
+        },
+        "7": {
+          "title": "Klimatyzacja komercyjna",
+          "description": "Kompleksowe rozwiązania klimatyzacyjne dla biur, sklepów i lokali usługowych."
+        },
+        "8": {
+          "title": "Naprawa klimatyzacji",
+          "description": "Diagnoza i usuwanie usterek wszystkich popularnych marek klimatyzatorów."
+        }
+      }
+    },
     "footer": {
       "banner": {
         "subTitle": "Potrzebujesz pomocy?",

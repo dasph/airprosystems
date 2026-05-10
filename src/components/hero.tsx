@@ -8,7 +8,7 @@ import Arrow from '~/icons/arrow.tsx'
 import Couch from '~/icons/couch.tsx'
 import CloudBlur from '~/icons/cloud-blur.tsx'
 
-import { Section } from '~/enums/common.ts'
+import { Section } from '~/enums/mod.ts'
 
 type T = Record<'title' | 'description' | 'contact' | 'slogan' | 'more', string>
 
@@ -52,7 +52,7 @@ export default ({ t, class: className = '', ...props }: Props) => (
             <ActionButton href={`#${Section.CONTACT}`}>{t.contact}</ActionButton>
 
             <Link
-              href='/'
+              href={`#${Section.OFFERINGS}`}
               class='flex items-center justify-center px-6 mt-4 text-sm font-medium tracking-wide text-gray-700 capitalize transition-all duration-200 transform border border-gray-300 rounded-lg sm:mt-0 gap-x-2 h-11 dark:text-white hover:border-gray-400 dark:border-gray-700 dark:hover:border-gray-500 focus:ring focus:ring-blue-300 dark:focus:ring-white/10 focus:ring-opacity-80'
             >
               {t.more}

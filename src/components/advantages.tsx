@@ -32,7 +32,7 @@ const Item: FunctionalComponent<Item> = ({ description, title, children }) => (
 )
 
 export default ({ items, class: className = '', ...props }: Props) => (
-  <section {...props} class={`mt-8 md:mt-20 ${className}`}>
+  <section {...props} class={`mt-8 md:mt-12 md:mb-4 ${className}`}>
     <div class='contained px-4 py-6 mx-auto sm:px-6'>
       <div class='grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:gap-8 text-gray-800 dark:text-white'>
         {items.map((props, index) => {
