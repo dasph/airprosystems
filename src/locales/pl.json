@@ -4,6 +4,11 @@
     "offerings": "usługi",
     "contact": "kontakt"
   },
+  "meta": {
+    "title": "AirPro Systems - Montaż i serwis klimatyzacji w Warszawie",
+    "description": "Profesjonalny montaż, serwis i naprawa klimatyzacji dla domu i biura. Szybka realizacja, gwarancja jakości. Zadzwoń i umów wizytę.",
+    "keywords": "klimatyzacja warszawa, montaż klimatyzacji, serwis klimatyzacji, naprawa klimatyzacji, klimatyzator dom, klimatyzator biuro, klimatyzacja cennik, przegląd klimatyzacji, czyszczenie klimatyzacji, klimatyzacja split, klimatyzacja inwerter, wentylacja mechaniczna, rekuperacja, technik klimatyzacji warszawa, klimatyzacja mazowsze, klimatyzacja pruszków, klimatyzacja piaseczno, klimatyzacja legionowo, tanie klimatyzatory, AirPro Systems"
+  },
   "component": {
     "hero": {
       "title": "Perfekcyjny klimat - niezależnie od pogody!",
@@ -99,13 +104,13 @@
       "cards": {
         "0": {
           "name": "Wiktor",
-          "phone": "796 402 890",
+          "phone": "731 784 472",
           "title": "Technik klimatyzacji",
           "description": "Zadzwoń i umów montaż lub przegląd. Działam sprawnie i bez żadnego zbędnego czekania."
         },
         "1": {
           "name": "Piotr",
-          "phone": "731 784 472",
+          "phone": "796 402 890",
           "title": "Technik klimatyzacji",
           "description": "Potrzebujesz serwisu lub naprawy? Zadzwoń - szybko ocenię problem i znajdę rozwiązanie."
         }

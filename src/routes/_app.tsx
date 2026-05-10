@@ -11,6 +11,11 @@ export default define.page(({ Component, state: { t } }) => (
 
       <title>{t('generic.brand')}</title>
 
+      <meta name="title" property="og:title" content={t('meta.title')} />
+      <meta name="description" property="og:description" content={t('meta.description')} />
+      <meta name="keywords" content={t('meta.keywords')} />
+      <meta property="og:type" content="website" />
+
       <link rel='icon' type='image/x-icon' href={`/${asset('favicon.ico')}`} sizes='64x64' />
       <link rel='icon' type='image/svg+xml' href={`/${asset('favicon.svg')}`} />
 
