@@ -1,8 +1,10 @@
-import { defineConfig } from 'vite'
-import { fresh } from '@fresh/plugin-vite'
 import tailwindcss from '@tailwindcss/vite'
+import { sveltekit } from '@sveltejs/kit/vite'
+import { defineConfig } from 'vite'
 
 export default defineConfig({
-  root: './src',
-  plugins: [fresh(), tailwindcss()],
+  plugins: [tailwindcss(), sveltekit()],
+  build: {
+    assetsInlineLimit: 0,
+  },
 })

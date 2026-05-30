@@ -1,5 +1,6 @@
 .env
 
 .vscode/
-src/_fresh/
+.svelte-kit/
+build/
 node_modules/
