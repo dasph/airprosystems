@@ -3,9 +3,7 @@
 
   import Link from '$lib/ui/atoms/Link.svelte'
 
-  type Props = {
-    external?: boolean
-  } & HTMLAnchorAttributes
+  type Props = HTMLAnchorAttributes
 
   const { children, class: className, ...props }: Props = $props()
 </script>

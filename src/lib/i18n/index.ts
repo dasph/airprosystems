@@ -1,12 +1,8 @@
 import { init, register } from 'svelte-i18n'
 
-export enum Locales {
-  EN = 'en',
-  PL = 'pl',
-  UK = 'uk',
-}
+import { Locales } from '$lib/enums'
 
-export const i18n = () => {
+export const i18n = async () => {
   register(Locales.PL, () => import('$lib/i18n/locales/pl.json'))
 
   return init({

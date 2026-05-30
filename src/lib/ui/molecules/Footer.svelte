@@ -3,11 +3,9 @@
 
   import type { Component } from 'svelte'
   import type { RouteId } from '$app/types'
-  import type { HTMLAnchorAttributes, HTMLAttributes } from 'svelte/elements'
+  import type { HTMLAttributes } from 'svelte/elements'
 
-  import { Section } from '$lib/enums'
-  import { SocialLink } from '$lib/constants'
-  import { isInEnum, scrollIntoView } from '$lib/helpers'
+  import { Section, SocialLink } from '$lib/enums'
 
   import Tiktok from '$lib/ui/icons/Tiktok.svelte'
   import Facebook from '$lib/ui/icons/Facebook.svelte'
@@ -16,6 +14,7 @@
   import LogoLarge from '$lib/ui/icons/LogoLarge.svelte'
   import CloudBlur from '$lib/ui/icons/CloudBlur.svelte'
 
+  import Link from '$lib/ui/atoms/Link.svelte'
   import Lined from '$lib/ui/atoms/Lined.svelte'
   import Spaced from '$lib/ui/atoms/Spaced.svelte'
   import ActionButton from '$lib/ui/atoms/ActionButton.svelte'
@@ -32,8 +31,8 @@
   }
 
   const siteLinks: Link[] = [
-    { href: Section.OFFERINGS, label: $_('generic.offerings') },
-    { href: Section.CONTACT, label: $_('generic.contact') },
+    { href: `#${Section.OFFERINGS}`, label: $_('generic.offerings') },
+    { href: `#${Section.CONTACT}`, label: $_('generic.contact') },
   ]
 
   const socialLinks: Link[] = [
@@ -50,16 +49,6 @@
   const copyright = `© ${new Date().getFullYear()} ${$_('generic.brand')}`
 
   const { class: className, ...props }: HTMLAttributes<HTMLElement> = $props()
-
-  const applyLink = (url: Link['href']) => {
-    const isAnchor = isInEnum(url, Section)
-    const isExternal = !isAnchor && isInEnum(url, SocialLink)
-
-    return {
-      href: isAnchor ? `/#${url}` : url,
-      ...(isAnchor ? { onclick: scrollIntoView(url) } : isExternal && { target: '_blank', rel: 'noopener noreferrer' }),
-    } satisfies Partial<HTMLAnchorAttributes>
-  }
 </script>
 
 {#snippet section({ name, links }: Column)}
@@ -69,9 +58,9 @@
     <ul class="mt-4 -ml-1.5 capitalize">
       {#each links as { href, label }}
         <li>
-          <a {...applyLink(href)} class="inline-flex p-1.5 transition-colors hover:text-gray-900 dark:hover:text-white">
+          <Link {href} class="inline-flex p-1.5 transition-colors hover:text-gray-900 dark:hover:text-white">
             {label}
-          </a>
+          </Link>
         </li>
       {/each}
     </ul>
@@ -119,13 +108,9 @@
 
               <div class="mt-2 flex items-center justify-between gap-1">
                 {#each socialLinks as link}
-                  <a
-                    {...applyLink(link.href)}
-                    aria-label={link.label}
-                    class="cursor-pointer p-2 transition-opacity hover:opacity-75"
-                  >
+                  <Link href={link.href} aria-label={link.label} class="cursor-pointer p-2 transition-opacity hover:opacity-75">
                     <link.logo class="h-5 w-auto" />
-                  </a>
+                  </Link>
                 {/each}
               </div>
             </div>

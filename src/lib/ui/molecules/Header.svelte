@@ -1,12 +1,11 @@
 <script lang="ts">
   import { _ } from 'svelte-i18n'
 
-  import type { HTMLAnchorAttributes, HTMLAttributes } from 'svelte/elements'
+  import type { HTMLAttributes } from 'svelte/elements'
 
   import { scroll } from '$lib/composables/scroll'
 
   import { Section } from '$lib/enums'
-  import { isInEnum, scrollIntoView } from '$lib/helpers'
 
   import Link from '$lib/ui/atoms/Link.svelte'
   import IconButton from '$lib/ui/atoms/IconButton.svelte'
@@ -45,15 +44,6 @@
 
     localStorage.setItem('theme', isDark ? 'dark' : 'white')
   }
-
-  const applyLink = (url: string) => {
-    const isAnchor = isInEnum(url, Section)
-
-    return {
-      href: isAnchor ? `/#${url}` : url,
-      ...(isAnchor && { onclick: scrollIntoView(url) }),
-    } satisfies Partial<HTMLAnchorAttributes>
-  }
 </script>
 
 {#snippet logo()}
@@ -65,7 +55,7 @@
 
 {#snippet linkList(onClick?: () => void)}
   {#each links as { href, label }}
-    <Link class="text-sm capitalize" onclick={onClick} {...applyLink(href)}>
+    <Link {href} class="text-sm capitalize" onclick={onClick}>
       {label}
     </Link>
   {/each}

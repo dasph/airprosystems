@@ -12,7 +12,6 @@
   import CloudBlur from '$lib/ui/icons/CloudBlur.svelte'
 
   import { Section } from '$lib/enums'
-  import { scrollIntoView } from '$lib/helpers'
 
   const { class: className, ...props }: HTMLAttributes<HTMLElement> = $props()
 </script>
@@ -64,13 +63,12 @@
         </p>
 
         <div class="sm: mt-6 items-center gap-x-4 sm:flex sm:justify-center lg:mt-8 lg:gap-x-6">
-          <ActionButton href={`#${Section.CONTACT}`} onclick={scrollIntoView(Section.CONTACT)}>
+          <ActionButton href={`#${Section.CONTACT}`}>
             {$_('generic.contact')}
           </ActionButton>
 
           <Link
             href={`#${Section.OFFERINGS}`}
-            onclick={scrollIntoView(Section.OFFERINGS)}
             class="focus:ring-opacity-80 mt-4 flex h-11 transform items-center justify-center gap-x-2 rounded-lg border border-gray-300 px-6 text-sm font-medium tracking-wide text-gray-700 capitalize transition-all duration-200 hover:border-gray-400 focus:ring focus:ring-blue-300 sm:mt-0 dark:border-gray-700 dark:text-white dark:hover:border-gray-500 dark:focus:ring-white/10"
           >
             {$_('component.hero.more')}
