@@ -1,5 +1,6 @@
 export enum Locales {
   PL = 'pl',
+  BE = 'be',
   UK = 'uk',
 }
 
