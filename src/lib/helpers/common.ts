@@ -1,4 +1,4 @@
-import type { Section } from '$lib/enums'
+import { Locales, type Section } from '$lib/enums'
 
 import { PUBLIC_BASE_URL } from '$env/static/public'
 
@@ -17,6 +17,10 @@ export const scrollIntoView = (section: Section) => (event: MouseEvent) => {
 
   target?.scrollIntoView({ behavior: 'smooth' })
 }
+
+export const langToLocale = (lang?: string): Locales => (isInEnum(lang, Locales) ? lang : Locales.PL)
+
+export const localeToPrefix = (locale: Locales): string => (locale === Locales.PL ? '/' : `/${locale}`)
 
 export const isExternalUrl = (href: string): boolean => {
   try {

@@ -17,7 +17,8 @@
     "header": {
       "openMenu": "Otwórz menu",
       "closeMenu": "Zamknij menu",
-      "toggleTheme": "Przełącz motyw"
+      "toggleTheme": "Przełącz motyw",
+      "selectLanguage": "Wybierz język"
     },
     "hero": {
       "title": "Perfekcyjny klimat - niezależnie od pogody!",

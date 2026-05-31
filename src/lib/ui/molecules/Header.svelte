@@ -9,6 +9,7 @@
 
   import Link from '$lib/ui/atoms/Link.svelte'
   import IconButton from '$lib/ui/atoms/IconButton.svelte'
+  import LanguageSelector from '$lib/ui/molecules/LanguageSelector.svelte'
 
   import X from '$lib/ui/icons/X.svelte'
   import Sun from '$lib/ui/icons/Sun.svelte'
@@ -53,13 +54,15 @@
   </Link>
 {/snippet}
 
-{#snippet linkList(onClick?: () => void)}
+{#snippet navLinks(onClick?: () => void)}
   {#each links as { href, label }}
     <Link {href} class="text-sm capitalize" onclick={onClick}>
       {label}
     </Link>
   {/each}
+{/snippet}
 
+{#snippet toggleTheme()}
   <IconButton aria-label={$_('component.header.toggleTheme')} onclick={toggleDarkMode}>
     <Sun class="hidden h-5 w-5 text-white duration-300 hover:rotate-180 dark:inline-block" />
     <Moon class="h-4 w-4 text-gray-700 duration-500 hover:rotate-[360deg] dark:hidden" />
@@ -82,7 +85,9 @@
   >
     {@render logo()}
 
-    <div class="-mr-2 flex items-center lg:hidden">
+    <div class="-mr-2 flex items-center gap-6 sm:gap-8 lg:hidden">
+      <LanguageSelector />
+
       <IconButton aria-label={$_('component.header.openMenu')} onclick={toggleDropdown}>
         <Burger class="mx-[3px] my-[5px] h-3.5 w-4.5" />
       </IconButton>
@@ -105,14 +110,20 @@
           </div>
 
           <div class="flex flex-col items-start space-y-4 px-5 pt-4 pb-3">
-            {@render linkList(toggleDropdown)}
+            {@render navLinks(toggleDropdown)}
+
+            {@render toggleTheme()}
           </div>
         </div>
       </div>
     </div>
 
     <div class="hidden items-center gap-x-8 lg:flex">
-      {@render linkList()}
+      {@render navLinks()}
+
+      <LanguageSelector />
+
+      {@render toggleTheme()}
     </div>
   </nav>
 </header>
