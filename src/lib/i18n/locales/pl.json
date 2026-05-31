@@ -2,7 +2,8 @@
   "generic": {
     "brand": "AirPro Systems",
     "offerings": "usługi",
-    "contact": "kontakt"
+    "contact": "kontakt",
+    "sendMail": "Wyślij e-mail"
   },
   "title": {
     "404": "Strona nie znaleziona - AirPro Systems"
@@ -176,6 +177,10 @@
       "sections": {
         "sitemap": "Mapa strony",
         "social": "Obserwuj nas"
+      },
+      "address": {
+        "1": "ul. Ludwika Zamenhofa 12/4",
+        "2": "00-187 Warszawa"
       }
     }
   }

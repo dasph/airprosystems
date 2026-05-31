@@ -14,6 +14,10 @@ export enum Section {
   OFFERINGS = 'offerings',
 }
 
+export enum Contact {
+  EMAIL = 'biuro@airpro.systems',
+}
+
 export enum SocialLink {
   TIKTOK = 'https://www.tiktok.com/@airprosystems',
   INSTAGRAM = 'https://www.instagram.com/air_pro_systems/',

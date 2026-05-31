@@ -2,7 +2,8 @@
   "generic": {
     "brand": "AirPro Systems",
     "offerings": "послуги",
-    "contact": "контакт"
+    "contact": "контакт",
+    "sendMail": "Надіслати e-mail"
   },
   "title": {
     "404": "Сторінку не знайдено - AirPro Systems"
@@ -176,6 +177,10 @@
       "sections": {
         "sitemap": "Карта сайту",
         "social": "Слідкуйте за нами"
+      },
+      "address": {
+        "1": "ul. Ludwika Zamenhofa 12/4",
+        "2": "00-187 Warszawa"
       }
     }
   }

@@ -5,8 +5,11 @@
   import type { RouteId } from '$app/types'
   import type { HTMLAttributes } from 'svelte/elements'
 
-  import { Section, SocialLink } from '$lib/enums'
+  import { browser } from '$app/environment'
 
+  import { Contact, Section, SocialLink } from '$lib/enums'
+
+  import Email from '$lib/ui/icons/Email.svelte'
   import Tiktok from '$lib/ui/icons/Tiktok.svelte'
   import Facebook from '$lib/ui/icons/Facebook.svelte'
   import Instagram from '$lib/ui/icons/Instagram.svelte'
@@ -49,6 +52,10 @@
   const copyright = `© ${new Date().getFullYear()} ${$_('generic.brand')}`
 
   const { class: className, ...props }: HTMLAttributes<HTMLElement> = $props()
+
+  let email = $state('')
+
+  $effect(() => void (browser && (email = Contact.EMAIL)))
 </script>
 
 {#snippet section({ name, links }: Column)}
@@ -100,10 +107,10 @@
         <Lined>
           <div class="flex flex-col justify-between gap-y-10 pb-8 sm:flex-row sm:pb-6">
             <div class="flex w-min flex-col">
-              <Spaced class="inline-flex gap-2 pt-6 sm:gap-3 lg:gap-4">
-                <LogoSmall class="h-7 w-auto sm:h-8 lg:h-9" />
+              <Spaced class="inline-flex justify-center gap-4 pt-6">
+                <LogoSmall class="h-9 w-auto" />
 
-                <LogoLarge class="h-7 w-auto sm:h-8 lg:h-9" />
+                <LogoLarge class="h-9 w-auto" />
               </Spaced>
 
               <div class="mt-2 flex items-center justify-between gap-1">
@@ -112,7 +119,29 @@
                     <link.logo class="h-5 w-auto" />
                   </Link>
                 {/each}
+
+                <Link
+                  href={`mailto:${email}`}
+                  aria-label={$_('generic.sendMail')}
+                  class="cursor-pointer p-2 transition-opacity hover:opacity-75"
+                >
+                  <Email class="h-5 w-auto" />
+                </Link>
               </div>
+
+              <address class="mt-4 text-sm/6 tracking-tighter text-gray-700 not-italic dark:text-gray-400">
+                <span class="block font-medium text-gray-800 dark:text-gray-200">
+                  {$_('component.footer.address.1')}
+                </span>
+
+                <span class="block">
+                  {$_('component.footer.address.2')}
+                </span>
+              </address>
+
+              <Link href={`mailto:${email}`} class="mt-2 h-[1em] font-mono text-sm/6 tracking-tighter">
+                {email}
+              </Link>
             </div>
 
             <div class="flex gap-x-20 sm:pt-6">

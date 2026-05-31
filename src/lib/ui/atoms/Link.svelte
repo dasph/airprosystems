@@ -12,13 +12,15 @@
 
   const { children, onclick, class: className, href: link, 'no-locale': noLocale, ...props }: Props = $props()
 
+  const isMailto = $derived(link?.startsWith('mailto:'))
+
   const isSection = $derived.by(() => {
     const section = !!link && link.startsWith('#') && link.slice(1)
 
     return isInEnum(section, Section) ? section : false
   })
 
-  const isExternal = $derived(link && !isSection && isExternalUrl(link))
+  const isExternal = $derived(link && !isSection && !isMailto && isExternalUrl(link))
 
   const href = $derived.by(() => {
     const prefix = page.params.lang ? `/${page.params.lang}` : ''
