@@ -31,7 +31,7 @@ jobs:
 
       - name: Build 🏗️
         env:
-          PUBLIC_BASE_URL: ${{ vars.BASE_URL }}
+          PUBLIC_ORIGIN: ${{ vars.ORIGIN }}
         run: |
           pnpm build
 

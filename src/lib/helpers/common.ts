@@ -1,6 +1,6 @@
 import { Locales, type Section } from '$lib/enums'
 
-import { PUBLIC_BASE_URL } from '$env/static/public'
+import { PUBLIC_ORIGIN } from '$env/static/public'
 
 export const entries = <T extends { [K in keyof T]: T[K] }>(input: T) => Object.entries(input) as [keyof T, T[keyof T]][]
 
@@ -24,7 +24,7 @@ export const localeToPrefix = (locale: Locales): string => (locale === Locales.P
 
 export const isExternalUrl = (href: string): boolean => {
   try {
-    return new URL(href).origin !== PUBLIC_BASE_URL
+    return new URL(href).origin !== PUBLIC_ORIGIN
   } catch {
     return false
   }
