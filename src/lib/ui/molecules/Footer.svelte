@@ -5,8 +5,6 @@
   import type { RouteId } from '$app/types'
   import type { HTMLAttributes } from 'svelte/elements'
 
-  import { browser } from '$app/environment'
-
   import { Contact, Section, SocialLink } from '$lib/enums'
 
   import Email from '$lib/ui/icons/Email.svelte'
@@ -52,10 +50,6 @@
   const copyright = `© ${new Date().getFullYear()} ${$_('generic.brand')}`
 
   const { class: className, ...props }: HTMLAttributes<HTMLElement> = $props()
-
-  let email = $state('')
-
-  $effect(() => void (browser && (email = Contact.EMAIL)))
 </script>
 
 {#snippet section({ name, links }: Column)}
@@ -105,7 +99,7 @@
 
       <div class="pb-10">
         <Lined>
-          <div class="flex flex-col justify-between gap-y-10 pb-8 sm:flex-row sm:pb-6">
+          <div class="flex flex-col justify-between gap-y-12 pb-8 sm:flex-row sm:pb-6">
             <div class="flex w-min flex-col">
               <Spaced class="inline-flex justify-center gap-4 pt-6">
                 <LogoSmall class="h-9 w-auto" />
@@ -121,7 +115,7 @@
                 {/each}
 
                 <Link
-                  href={`mailto:${email}`}
+                  href={`mailto:${Contact.EMAIL}`}
                   aria-label={$_('generic.sendMail')}
                   class="cursor-pointer p-2 transition-opacity hover:opacity-75"
                 >
@@ -139,8 +133,8 @@
                 </span>
               </address>
 
-              <Link href={`mailto:${email}`} class="mt-2 h-[1em] font-mono text-sm/6 tracking-tighter">
-                {email}
+              <Link href={`mailto:${Contact.EMAIL}`} class="mt-2 font-mono text-sm/6 tracking-tighter">
+                {Contact.EMAIL}
               </Link>
             </div>
 

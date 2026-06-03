@@ -16,7 +16,7 @@
   <link rel="icon" href={faviconsvg} type="image/svg+xml" />
   <link rel="icon" href={faviconpng} type="image/png" sizes="64x64" />
 
-  <title>{$_('generic.brand')}</title>
+  <title>{$_('meta.title')}</title>
 
   <meta name="title" property="og:title" content={$_('meta.title')} />
   <meta name="description" property="og:description" content={$_('meta.description')} />

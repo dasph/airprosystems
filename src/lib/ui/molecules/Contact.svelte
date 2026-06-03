@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { _ } from 'svelte-i18n'
+  import { _, json } from 'svelte-i18n'
 
   import type { Component } from 'svelte'
   import type { HTMLAttributes } from 'svelte/elements'
@@ -16,6 +16,7 @@
     phone: string
     title: string
     description: string
+    preferred: boolean
     icon: Component
   }
 
@@ -26,6 +27,7 @@
       title: $_('component.contact.cards.0.title'),
       description: $_('component.contact.cards.0.description'),
       phone: $_('component.contact.cards.0.phone'),
+      preferred: !!$json('component.contact.cards.0.preferred'),
     },
     {
       icon: UserB,
@@ -33,6 +35,7 @@
       title: $_('component.contact.cards.1.title'),
       description: $_('component.contact.cards.1.description'),
       phone: $_('component.contact.cards.1.phone'),
+      preferred: !!$json('component.contact.cards.1.preferred'),
     },
   ]
 
@@ -42,9 +45,15 @@
 {#snippet card(props: Card)}
   <a
     href={`tel:+42${props.phone.replaceAll(' ', '')}`}
-    class="rounded-2xl bg-gradient-to-b from-gray-200 to-gray-100 p-px shadow-xl dark:from-gray-700/60 dark:to-gray-800/40 dark:shadow-black/30"
+    class={[
+      'rounded-2xl bg-linear-to-b from-gray-200 to-gray-100 p-px shadow-xl dark:from-gray-700/60 dark:to-gray-800/40 dark:shadow-black/30',
+      {
+        'scale action before:scale-x-98 before:scale-y-95 before:opacity-100 focus:before:scale-99 active:before:scale-99 dark:before:scale-y-93 dark:before:opacity-50':
+          props.preferred,
+      },
+    ]}
   >
-    <div class="flex items-center gap-5 rounded-[calc(1rem-1px)] bg-white p-6 sm:p-8 dark:bg-gray-900">
+    <div class="relative flex h-full gap-5 rounded-[calc(1rem-1px)] bg-white p-6 sm:p-8 dark:bg-gray-900">
       <div class="shrink-0 self-start rounded-2xl bg-gray-800 p-2 text-white">
         <props.icon class="h-17 w-auto" />
       </div>
@@ -54,7 +63,7 @@
 
         <p class="text-primary mt-1 text-xs font-medium tracking-widest uppercase">{props.title}</p>
 
-        <p class="mt-3 text-sm tracking-tight text-gray-500 dark:text-gray-400">{props.description}</p>
+        <p class="mt-3 mb-auto text-sm tracking-tight text-gray-500 dark:text-gray-400">{props.description}</p>
 
         <span
           class="text-md mt-3 inline-flex items-center gap-2 font-medium text-gray-700 transition-colors hover:text-gray-900 dark:text-gray-300 dark:hover:text-white"
@@ -68,7 +77,7 @@
   </a>
 {/snippet}
 
-<section class={['overflow-x-hidden bg-gray-900 text-white dark:bg-gray-950', className]} {...props}>
+<section class={['overflow-x-hidden bg-gray-900 pb-10 text-white dark:bg-gray-950', className]} {...props}>
   <div class="pt-20 pb-40">
     <div class="contained">
       <div class="flex flex-col items-center justify-between lg:flex-row">

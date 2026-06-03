@@ -31,3 +31,7 @@
 @utility contained {
   @apply container mx-auto px-4 sm:px-6 lg:px-8;
 }
+
+@utility action {
+  @apply relative inline-block bg-gradient-to-r from-purple-600 to-sky-500 before:absolute before:inset-0 before:scale-75 before:bg-gradient-to-r before:from-purple-400 before:to-sky-400 before:opacity-50 before:blur-lg before:transition before:duration-300 hover:before:scale-100 hover:before:opacity-100 focus:before:scale-90 focus:before:opacity-75 active:before:scale-90 dark:from-purple-600 dark:to-blue-400 dark:before:from-purple-600 dark:before:to-sky-500;
+}
