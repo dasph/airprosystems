@@ -32,6 +32,7 @@ jobs:
       - name: Build 🏗️
         env:
           PUBLIC_ORIGIN: ${{ vars.ORIGIN }}
+          PUBLIC_R2_ORIGIN: ${{ vars.R2_ORIGIN }}
         run: |
           pnpm build
 

@@ -1,6 +1,8 @@
 <script lang="ts">
   import { _ } from 'svelte-i18n'
 
+  import { PUBLIC_R2_ORIGIN } from '$env/static/public'
+
   import faviconsvg from '$lib/assets/favicon/favicon.svg'
   import faviconpng from '$lib/assets/favicon/favicon.png'
 
@@ -23,6 +25,18 @@
   <meta name="keywords" content={$_('meta.keywords')} />
 
   <meta property="og:type" content="website" />
+
+  <meta property="og:image" content={`${PUBLIC_R2_ORIGIN}/opengraph.jpg`} />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:alt" content={$_('meta.imagealt')} />
+
+  <meta property="og:image" content={`${PUBLIC_R2_ORIGIN}/opengraph-square.jpg`} />
+  <meta property="og:image:width" content="630" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:alt" content={$_('meta.imagealt')} />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
