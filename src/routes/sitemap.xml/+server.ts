@@ -11,9 +11,7 @@ const locales = Object.values(Locales).map(localeToPrefix)
 
 const pages: RouteId[] = ['/']
 
-const urls = locales.map((prefix) =>
-  pages.map((page) => `<url><loc>${PUBLIC_ORIGIN}${prefix}${page.replace(/\/$/, '')}</loc></url>`),
-)
+const urls = locales.map((prefix) => pages.map((page) => `<url><loc>${PUBLIC_ORIGIN}${prefix}${page}</loc></url>`))
 
 const sitemap = `
 <?xml version="1.0" encoding="UTF-8"?>

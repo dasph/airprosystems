@@ -40,7 +40,7 @@
     {#each Object.values(Locales) as option}
       <li role="option" aria-selected={option === locale}>
         <Link
-          href={localeToPrefix(option)}
+          href={localeToPrefix(option) || '/'}
           no-locale
           data-sveltekit-reload
           data-sveltekit-preload-data="off"
