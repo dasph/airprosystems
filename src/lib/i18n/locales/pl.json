@@ -167,6 +167,9 @@
         }
       }
     },
+    "mapLocation": {
+      "title": "Mapa lokalizacji AirPro Systems w Warszawie"
+    },
     "footer": {
       "banner": {
         "subTitle": "Potrzebujesz pomocy?",

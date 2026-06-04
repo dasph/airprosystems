@@ -8,6 +8,7 @@
   import Contact from '$lib/ui/molecules/Contact.svelte'
   import Offerings from '$lib/ui/molecules/Offerings.svelte'
   import Advantages from '$lib/ui/molecules/Advantages.svelte'
+  import MapLocation from '$lib/ui/molecules/MapLocation.svelte'
   import Testimonials from '$lib/ui/molecules/Testimonials.svelte'
 </script>
 
@@ -24,3 +25,5 @@
 <Offerings />
 
 <Testimonials />
+
+<MapLocation />

@@ -168,6 +168,9 @@
         }
       }
     },
+    "mapLocation": {
+      "title": "Карта розташування AirPro Systems у Варшаві"
+    },
     "footer": {
       "banner": {
         "subTitle": "Потрібна допомога?",
