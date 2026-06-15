@@ -44,7 +44,7 @@
 
 {#snippet card(props: Card)}
   <a
-    href={`tel:+42${props.phone.replaceAll(' ', '')}`}
+    href={`tel:+48${props.phone.replaceAll(' ', '')}`}
     class={[
       'rounded-2xl bg-linear-to-b from-gray-200 to-gray-100 p-px shadow-xl dark:from-gray-700/60 dark:to-gray-800/40 dark:shadow-black/30',
       {
