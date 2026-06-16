@@ -9,12 +9,14 @@
   import Header from '$lib/ui/molecules/Header.svelte'
   import Footer from '$lib/ui/molecules/Footer.svelte'
 
-  import './layout.css'
+  import css from './layout.css?url'
 
   let { children } = $props()
 </script>
 
 <svelte:head>
+  <link rel="preload" href={css} as="style" />
+
   <link rel="icon" href={faviconsvg} type="image/svg+xml" />
   <link rel="icon" href={faviconpng} type="image/png" sizes="64x64" />
 
@@ -37,6 +39,8 @@
   <meta property="og:image:height" content="630" />
   <meta property="og:image:type" content="image/jpeg" />
   <meta property="og:image:alt" content={$_('meta.imagealt')} />
+
+  <link rel="stylesheet" href={css} />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
